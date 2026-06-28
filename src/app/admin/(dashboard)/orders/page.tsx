@@ -1,4 +1,5 @@
 import { db } from "@/lib/db";
+import Link from "next/link";
 import { Plus } from "lucide-react";
 
 export default async function AdminOrdersPage() {
@@ -10,9 +11,12 @@ export default async function AdminOrdersPage() {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="font-space-grotesk text-3xl font-bold">Orders</h1>
-        <button className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors">
+        <Link 
+          href="/admin/orders/new" 
+          className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors"
+        >
           <Plus size={20} /> Create Manual Order
-        </button>
+        </Link>
       </div>
 
       <div className="bg-background rounded-xl border border-border shadow-sm overflow-hidden">

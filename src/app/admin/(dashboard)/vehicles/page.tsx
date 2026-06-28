@@ -1,6 +1,7 @@
 import { db } from "@/lib/db";
 import Link from "next/link";
-import { Plus, Edit, Trash2 } from "lucide-react";
+import { Plus, Edit } from "lucide-react";
+import DeleteVehicleButton from "./DeleteVehicleButton";
 
 export default async function AdminVehiclesPage() {
   const vehicles = await db.vehicle.findMany({
@@ -58,12 +59,14 @@ export default async function AdminVehiclesPage() {
                   </td>
                   <td className="p-4 text-right">
                     <div className="flex justify-end gap-2">
-                      <button className="p-2 text-foreground/50 hover:text-foreground transition-colors" title="Edit">
+                      <Link 
+                        href={`/admin/vehicles/${v.id}/edit`}
+                        className="p-2 text-foreground/50 hover:text-foreground transition-colors" 
+                        title="Edit"
+                      >
                         <Edit size={18} />
-                      </button>
-                      <button className="p-2 text-foreground/50 hover:text-destructive transition-colors" title="Delete">
-                        <Trash2 size={18} />
-                      </button>
+                      </Link>
+                      <DeleteVehicleButton vehicleId={v.id} />
                     </div>
                   </td>
                 </tr>

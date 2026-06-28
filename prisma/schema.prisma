@@ -47,12 +47,12 @@ model Vehicle {
   name         String
   brand        String
   slug         String   @unique
-  price        Int      // Price per day in cents/paise
+  price        Int // Price per day in cents/paise
   description  String
-  features     Json     // Store as an array or object
+  features     Json // Store as an array or object
   seats        Int
-  transmission String   // "Automatic" or "Manual"
-  fuel         String   // "Petrol", "Diesel", "Electric", "Hybrid"
+  transmission String // "Automatic" or "Manual"
+  fuel         String // "Petrol", "Diesel", "Electric", "Hybrid"
   luggage      Int
   featured     Boolean  @default(false)
   isAvailable  Boolean  @default(true)
@@ -96,6 +96,7 @@ model Order {
   id             String        @id @default(uuid())
   customerName   String
   phone          String
+  email          String?
   vehicle        String
   pickupDate     DateTime
   dropDate       DateTime

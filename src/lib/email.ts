@@ -1,22 +1,33 @@
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
-// ─── Email Client (Resend) ───────────────────────────────────────
+// ─── Email Client (Nodemailer) ───────────────────────────────────────
 
-function createEmailClient(): Resend | null {
-  const apiKey = process.env.RESEND_API_KEY;
+function createEmailClient() {
+  const host = process.env.SMTP_HOST;
+  const port = process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT, 10) : 587;
+  const user = process.env.SMTP_USER;
+  const pass = process.env.SMTP_PASS;
 
-  if (!apiKey) {
-    console.warn("[Email] RESEND_API_KEY not set. Email notifications disabled.");
+  if (!host || !user || !pass) {
+    console.warn("[Email] SMTP credentials not fully set. Email notifications disabled.");
     return null;
   }
 
-  return new Resend(apiKey);
+  return nodemailer.createTransport({
+    host,
+    port,
+    secure: port === 465, // true for 465, false for other ports
+    auth: {
+      user,
+      pass,
+    },
+  });
 }
 
 export const emailClient = createEmailClient();
 
 const FROM_EMAIL =
-  process.env.RESEND_FROM_EMAIL || "Way2Car <bookings@way2car.com>";
+  process.env.SMTP_FROM_EMAIL || "Way2Car <bookings@way2car.com>";
 
 // ─── Email Templates ─────────────────────────────────────────────
 
@@ -45,7 +56,7 @@ export async function sendBookingConfirmation(
   }
 
   try {
-    await emailClient.emails.send({
+    await emailClient.sendMail({
       from: FROM_EMAIL,
       to,
       subject: `Booking Confirmed — ${data.confirmationCode} | Way2Car`,
@@ -71,7 +82,7 @@ export async function sendBookingCancellation(
   }
 
   try {
-    await emailClient.emails.send({
+    await emailClient.sendMail({
       from: FROM_EMAIL,
       to,
       subject: `Booking Cancelled — ${data.confirmationCode} | Way2Car`,
