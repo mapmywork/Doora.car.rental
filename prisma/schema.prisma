@@ -1,0 +1,128 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ───────────────────────────────────────────────────────
+
+enum EnquiryStatus {
+  NEW
+  READ
+  REPLIED
+  CONVERTED
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  RUNNING
+  COMPLETED
+  CANCELLED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  PARTIAL
+}
+
+// ─── Models ──────────────────────────────────────────────────────
+
+model Admin {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  createdAt    DateTime @default(now())
+
+  @@map("admins")
+}
+
+model Vehicle {
+  id           String   @id @default(uuid())
+  name         String
+  brand        String
+  slug         String   @unique
+  price        Int      // Price per day in cents/paise
+  description  String
+  features     Json     // Store as an array or object
+  seats        Int
+  transmission String   // "Automatic" or "Manual"
+  fuel         String   // "Petrol", "Diesel", "Electric", "Hybrid"
+  luggage      Int
+  featured     Boolean  @default(false)
+  isAvailable  Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  images VehicleImage[]
+
+  @@index([slug])
+  @@index([isAvailable])
+  @@map("vehicles")
+}
+
+model VehicleImage {
+  id        String  @id @default(uuid())
+  vehicleId String
+  url       String
+  isPrimary Boolean @default(false)
+
+  vehicle Vehicle @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+
+  @@index([vehicleId])
+  @@map("vehicle_images")
+}
+
+model Enquiry {
+  id        String        @id @default(uuid())
+  name      String
+  phone     String
+  email     String
+  vehicle   String
+  message   String
+  status    EnquiryStatus @default(NEW)
+  createdAt DateTime      @default(now())
+
+  @@index([status])
+  @@map("enquiries")
+}
+
+model Order {
+  id             String        @id @default(uuid())
+  customerName   String
+  phone          String
+  vehicle        String
+  pickupDate     DateTime
+  dropDate       DateTime
+  status         OrderStatus   @default(PENDING)
+  notes          String?
+  paymentStatus  PaymentStatus @default(PENDING)
+  assignedDriver String?
+  pickupLocation String?
+  dropLocation   String?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  @@index([status])
+  @@map("orders")
+}
+
+model BusinessSettings {
+  id              Int      @id @default(1)
+  whatsappNumber  String?
+  email           String?
+  officeAddress   String?
+  metaTitle       String?
+  metaDescription String?
+  ogImage         String?
+  gaId            String?
+  smtpSettings    Json?
+  updatedAt       DateTime @updatedAt
+
+  @@map("business_settings")
+}
