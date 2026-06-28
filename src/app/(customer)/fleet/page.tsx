@@ -32,11 +32,11 @@ export default async function FleetPage() {
       <section className="py-20 bg-background flex-grow">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {vehicles.map((vehicle) => (
+            {vehicles.map((vehicle: any) => (
               <div key={vehicle.id} className="group relative bg-secondary/30 rounded-2xl overflow-hidden border border-border/50 hover:border-primary/50 transition-colors">
                 <div className="aspect-[4/3] w-full overflow-hidden bg-secondary">
                   <img 
-                    src={vehicle.images.find(img => img.isPrimary)?.url || vehicle.images[0]?.url || "https://placehold.co/800x600/111111/FFFFFF?text=DOORA+MOBILITY"} 
+                    src={vehicle.images.find((img: any) => img.isPrimary)?.url || vehicle.images[0]?.url || "https://placehold.co/800x600/111111/FFFFFF?text=DOORA+MOBILITY"} 
                     alt={vehicle.name} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />

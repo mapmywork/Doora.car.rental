@@ -33,7 +33,7 @@ export default async function AdminVehiclesPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-border/50">
-              {vehicles.map((v) => (
+              {vehicles.map((v: any) => (
                 <tr key={v.id} className="hover:bg-secondary/20 transition-colors">
                   <td className="p-4">
                     <div className="w-12 h-12 rounded bg-secondary overflow-hidden shrink-0">
