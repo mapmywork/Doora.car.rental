@@ -90,7 +90,7 @@ export default async function EditVehiclePage({ params }: { params: Promise<{ id
             
             <div className="space-y-2">
               <label className="text-sm font-inter text-foreground/80">Features (Comma separated)</label>
-              <input name="features" type="text" defaultValue={vehicle.features.join(", ")} className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-2 font-inter" placeholder="e.g. Leather Seats, Navigation, Sunroof" />
+              <input name="features" type="text" defaultValue={Array.isArray(vehicle.features) ? vehicle.features.join(", ") : ""} className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-2 font-inter" placeholder="e.g. Leather Seats, Navigation, Sunroof" />
             </div>
           </div>
         </div>
