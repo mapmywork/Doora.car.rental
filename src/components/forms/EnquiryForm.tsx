@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 
-export function EnquiryForm() {
+export function EnquiryForm({ whatsappNumber = "1234567890" }: { whatsappNumber?: string }) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -11,28 +11,30 @@ export function EnquiryForm() {
     setStatus("loading");
     
     const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      vehicle: formData.get("vehicle"),
-      message: formData.get("message"),
-    };
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const phone = formData.get("phone") as string;
+    const vehicle = formData.get("vehicle") as string;
+    const message = formData.get("message") as string;
 
-    try {
-      const res = await fetch("/api/enquiries", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+    const data = { name, email, phone, vehicle, message };
 
-      if (!res.ok) throw new Error("Failed to submit");
-      
-      setStatus("success");
-      (e.target as HTMLFormElement).reset();
-    } catch (err) {
-      setStatus("error");
-    }
+    // Fire off to API in the background
+    fetch("/api/enquiries", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    }).catch(console.error);
+
+    // Open WhatsApp synchronously to prevent popup blockers
+    const cleanPhone = whatsappNumber.replace(/\D/g, "");
+    const waText = `*New Enquiry*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Vehicle of Interest:* ${vehicle}\n*Additional Details:* ${message}`;
+    const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(waText)}`;
+    
+    window.open(waUrl, "_blank");
+
+    setStatus("success");
+    (e.target as HTMLFormElement).reset();
   };
 
   return (

@@ -1,4 +1,5 @@
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
+import { db } from "@/lib/db";
 import { MapPin, Phone, Mail } from "lucide-react";
 
 export const metadata = {
@@ -6,22 +7,30 @@ export const metadata = {
   description: "Get in touch with the DOORA MOBILITY concierge team.",
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const settings = await db.businessSettings.findFirst();
+  const whatsappNumber = settings?.whatsappNumber || "1234567890";
+
   return (
-    <div className="container mx-auto px-4 py-20 max-w-6xl">
-      <div className="text-center mb-16">
-        <h1 className="font-space-grotesk text-5xl md:text-6xl font-bold uppercase tracking-tighter mb-4">
-          Contact <span className="text-primary">Us</span>
-        </h1>
-        <p className="font-inter text-foreground/80 max-w-2xl mx-auto">
-          Our concierge team is available 24/7 to assist with your luxury vehicle requirements.
-        </p>
-      </div>
+    <div className="flex flex-col w-full min-h-screen">
+      <section className="bg-foreground text-background pt-32 pb-20 px-4">
+        <div className="container mx-auto text-center">
+          <h1 className="font-space-grotesk text-5xl md:text-6xl font-bold uppercase tracking-tighter mb-4">
+            Contact <span className="text-primary">Us</span>
+          </h1>
+          <p className="font-inter text-background/80 max-w-2xl mx-auto">
+            Our concierge team is available 24/7 to assist with your luxury vehicle requirements.
+          </p>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-background flex-grow">
+        <div className="container mx-auto px-4 max-w-6xl">
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
           <h2 className="font-space-grotesk text-3xl font-bold mb-8">Send an Enquiry</h2>
-          <EnquiryForm />
+          <EnquiryForm whatsappNumber={whatsappNumber} />
         </div>
 
         <div>
@@ -60,6 +69,8 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+      </div>
+      </section>
     </div>
   );
 }

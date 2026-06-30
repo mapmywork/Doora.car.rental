@@ -77,7 +77,6 @@ export async function updateVehicle(vehicleId: string, formData: FormData) {
   revalidatePath("/admin/vehicles");
   revalidatePath("/");
   revalidatePath("/fleet");
-  revalidatePath(`/vehicle/${slug}`);
   
   redirect("/admin/vehicles");
 }

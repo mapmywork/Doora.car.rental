@@ -5,8 +5,9 @@ export function Footer() {
     <footer className="bg-foreground text-background py-12 mt-20 border-t border-border/10">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="md:col-span-1">
-          <Link href="/" className="font-space-grotesk text-2xl font-bold tracking-tighter">
-            DOORA <span className="text-primary">MOBILITY</span>
+          <Link href="/" className="flex items-center gap-3 mb-2">
+            <img src="/logo.png" alt="DOORA Mobility Logo" className="h-12 w-12 rounded-full object-cover shadow-sm border border-gray-600" />
+            <span className="font-space-grotesk text-2xl font-bold tracking-tighter">DOORA <span className="text-primary">MOBILITY</span></span>
           </Link>
           <p className="mt-4 font-inter text-sm text-background/70">
             Premium car rental services providing luxury, comfort, and reliability for all your journeys.
