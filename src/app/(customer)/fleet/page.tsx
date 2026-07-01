@@ -105,37 +105,43 @@ export default async function FleetPage({ searchParams }: { searchParams: Promis
       </section>
 
       {/* Why Choose Us Section */}
+      {/* The DOORA Advantage Section */}
       <section className="py-20 bg-secondary/20 border-t border-border/50">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <span className="text-primary font-bold tracking-wider uppercase text-sm">Elite Standards</span>
-            <h2 className="font-space-grotesk text-3xl md:text-4xl font-bold mt-2 mb-6">Why Choose Us for Staff Transport?</h2>
+            <h2 className="font-space-grotesk text-3xl md:text-4xl font-bold mt-2 mb-6">The DOORA Advantage</h2>
           </div>
           
-          <div className="space-y-12">
-            <div>
-              <h3 className="font-space-grotesk text-xl font-bold mb-3">Punctuality you can count on</h3>
-              <p className="font-inter text-foreground/70 leading-relaxed">It can be hard to know what traffic will be like in Pune and the surrounding industrial areas, but delays don't have to be. Our fleet of modern sedans, MUVs, buses, and vans is perfectly timed to pick up and drop off your employees so that they are always on time. One of our rules says, We carefully check each employee transport ride for cleanliness, punctuality, and driver behavior.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="bg-background p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-space-grotesk text-xl font-bold mb-3 text-primary">Timely & Reliable Service</h3>
+              <p className="font-inter text-foreground/70 leading-relaxed text-sm">Consistent, on-time transportation you can depend on.</p>
             </div>
             
-            <div>
-              <h3 className="font-space-grotesk text-xl font-bold mb-3">Safety as standard</h3>
-              <p className="font-inter text-foreground/70 leading-relaxed">Your employees' well-being is our priority. Drivers go through rigorous background checks and training, vehicles are regularly maintained, and each ride is equipped with safety features. For businesses operating in Pune, PCMC, Pimpri-Chinchwad, Thergaon and beyond, this peace of mind makes all the difference.</p>
+            <div className="bg-background p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-space-grotesk text-xl font-bold mb-3 text-primary">Safety & Compliance</h3>
+              <p className="font-inter text-foreground/70 leading-relaxed text-sm">Maintaining high safety standards and reliable service for every trip.</p>
             </div>
             
-            <div>
-              <h3 className="font-space-grotesk text-xl font-bold mb-3">Tailored solutions for your organisation</h3>
-              <p className="font-inter text-foreground/70 leading-relaxed">No two businesses are identical. That's why ECRS offers fully customizable employee transportation programs—whether you're catering to a small team or hundreds of employees. Our flexible routing, scheduling, and vehicle selection options offer cost-effective solutions that scale with your evolving requirements. From executive sedans for top management to spacious buses for staff shuttles, we have the right vehicle for every need.</p>
+            <div className="bg-background p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-space-grotesk text-xl font-bold mb-3 text-primary">Business-Centric Mobility</h3>
+              <p className="font-inter text-foreground/70 leading-relaxed text-sm">Flexible transportation plans designed to suit your business, workforce, and operational needs.</p>
             </div>
             
-            <div>
-              <h3 className="font-space-grotesk text-xl font-bold mb-3">Advanced Technology for Seamless Management</h3>
-              <p className="font-inter text-foreground/70 leading-relaxed">Managing employee transportation is simpler with our technology-driven booking and tracking systems. Enjoy real-time vehicle tracking, efficient route optimizations to beat Pune's traffic, and an intuitive online platform for scheduling and managing rides. Our 24/7 dedicated customer support ensures any changes or queries are promptly addressed.</p>
+            <div className="bg-background p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-space-grotesk text-xl font-bold mb-3 text-primary">Connected Mobility</h3>
+              <p className="font-inter text-foreground/70 leading-relaxed text-sm">Smart booking, GPS tracking, and trip monitoring for complete visibility.</p>
             </div>
             
-            <div>
-              <h3 className="font-space-grotesk text-xl font-bold mb-3">Cost-effective, efficient and environmentally mindful</h3>
-              <p className="font-inter text-foreground/70 leading-relaxed">With efficient route planning and optimised vehicle utilisation, you get more value for your transport budget. As we expand our presence in over 180 cities, we're also adding greener vehicles to fit modern corporate.</p>
+            <div className="bg-background p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-space-grotesk text-xl font-bold mb-3 text-primary">Value-Driven Pricing</h3>
+              <p className="font-inter text-foreground/70 leading-relaxed text-sm">Competitive pricing with transparent billing and exceptional service.</p>
+            </div>
+
+            <div className="bg-background p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-space-grotesk text-xl font-bold mb-3 text-primary">Eco-Conscious Mobility</h3>
+              <p className="font-inter text-foreground/70 leading-relaxed text-sm">Promoting efficient travel solutions with a focus on sustainability.</p>
             </div>
           </div>
         </div>

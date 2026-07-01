@@ -272,7 +272,7 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
       {/* Supplier Benefits / Enquiry Section */}
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
             
             {/* Left Content */}
             <div className="w-full lg:w-1/2 space-y-8">

@@ -40,7 +40,7 @@ Number of Vehicles: ${data.noOfVehicles || "N/A"}
 Vehicle Types: ${data.vehicleTypes !== "Select vehicle types" ? data.vehicleTypes : "N/A"}`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappNumber = "919999999999"; // TODO: Replace with actual WhatsApp number
+    const whatsappNumber = "918637743774"; 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
     window.open(whatsappUrl, "_blank");
@@ -176,11 +176,11 @@ Vehicle Types: ${data.vehicleTypes !== "Select vehicle types" ? data.vehicleType
           </div>
         </div>
 
-        <div className="pt-4 flex justify-center md:justify-end">
+        <div className="pt-4 flex justify-center w-full">
           <button 
             type="submit" 
             disabled={isSubmitting}
-            className="bg-white text-red-500 font-bold border-2 border-red-500 rounded-lg px-10 py-3 shadow-[0_4px_0_0_rgba(239,68,68,1)] hover:translate-y-[2px] hover:shadow-[0_2px_0_0_rgba(239,68,68,1)] active:translate-y-[4px] active:shadow-none transition-all"
+            className="bg-white text-red-500 font-bold border-2 border-red-500 rounded-lg px-8 py-2.5 shadow-[0_4px_0_0_rgba(239,68,68,1)] hover:translate-y-[2px] hover:shadow-[0_2px_0_0_rgba(239,68,68,1)] active:translate-y-[4px] active:shadow-none transition-all"
           >
             {isSubmitting ? "Submitting..." : "Submit Enquiry"}
           </button>
