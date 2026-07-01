@@ -11,6 +11,9 @@ export default function AboutPage() {
           <h1 className="font-space-grotesk text-5xl md:text-6xl font-bold uppercase tracking-tighter mb-4">
             About <span className="text-primary">DOORA</span>
           </h1>
+          <p className="font-inter text-background/80 text-xl max-w-2xl mx-auto mt-6">
+            Redefining Corporate and Premium Mobility
+          </p>
         </div>
       </section>
       
@@ -18,20 +21,29 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 max-w-4xl">
       <div className="prose prose-lg dark:prose-invert max-w-none font-inter text-foreground/80 space-y-6">
         <p>
-          Welcome to DOORA MOBILITY, where luxury meets the open road. We are more than just a car rental company; we are curators of extraordinary driving experiences.
+          DOORA was established with a vision to redefine corporate and premium mobility by combining dependable service, modern technology, and customer-first experiences. We provide professional transportation solutions for businesses, travellers, and individuals, offering services ranging from airport transfers and corporate travel to outstation journeys and event transportation.
         </p>
         <p>
-          Founded on the principle that the journey is just as important as the destination, DOORA provides an exclusive fleet of the world's most prestigious vehicles. From high-performance sports cars that pulse with adrenaline to ultra-luxury sedans that glide in absolute silence, our collection is meticulously maintained to exceed the expectations of the most discerning clients.
+          Our focus is on delivering safe, punctual, and comfortable travel through a network of verified drivers, well-maintained vehicles, and transparent pricing. Every trip is supported by responsive customer service and technology-driven booking and trip management to ensure a seamless experience from reservation to destination.
+        </p>
+        <p>
+          As a growing mobility brand, DOORA is committed to building long-term relationships based on trust, reliability, and service excellence. Our mission is to become the preferred transportation partner for corporate clients and individual travellers by consistently delivering quality, professionalism, and value.
         </p>
         
         <h2 className="font-space-grotesk text-3xl font-bold text-foreground mt-12 mb-4">Our Standard of Excellence</h2>
         <p>
-          Every vehicle in our fleet undergoes a rigorous 50-point inspection before every rental. We guarantee that your chosen vehicle will arrive in immaculate, showroom condition. Our white-glove delivery service ensures that whether you're at the airport, your hotel, or your private residence, your vehicle is waiting for you exactly when you need it.
+          Every vehicle available through DOORA is carefully inspected and prepared to meet our quality and safety standards before every trip. We work with trusted fleet partners to ensure that our customers receive clean, well-maintained, and reliable vehicles for every journey.
+        </p>
+        <p>
+          Whether your pickup location is an airport, hotel, office, or residence, our team coordinates timely vehicle dispatch and professional service to deliver a smooth and hassle-free experience. From booking confirmation to trip completion, DOORA is committed to providing dependable mobility with comfort, punctuality, and exceptional customer support.
         </p>
 
         <h2 className="font-space-grotesk text-3xl font-bold text-foreground mt-12 mb-4">Chauffeur Services</h2>
         <p>
-          For those who prefer to sit back and relax, our professional chauffeurs provide a discreet, reliable, and highly secure service. Trained in advanced driving techniques and absolute confidentiality, they are dedicated to ensuring your transit is smooth and completely undisturbed.
+          For customers who prefer a chauffeur-driven experience, DOORA offers professional and courteous drivers committed to delivering safe, comfortable, and dependable transportation. Our chauffeur partners are selected for their professionalism, punctuality, and customer service, ensuring every journey is smooth, stress-free, and enjoyable.
+        </p>
+        <p>
+          Whether you're travelling for business meetings, airport transfers, corporate events, or personal occasions, our chauffeur-driven services are designed to provide convenience, reliability, and peace of mind from pickup to destination.
         </p>
       </div>
         </div>

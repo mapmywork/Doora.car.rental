@@ -25,7 +25,7 @@ export function HeroContent() {
         style={{ transitionDelay: "0s" }}
       >
         <h1 className="font-space-grotesk text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white uppercase">
-          Drive The
+          Experience
         </h1>
       </div>
 
@@ -37,7 +37,7 @@ export function HeroContent() {
         style={{ transitionDelay: "0.15s" }}
       >
         <span className="font-space-grotesk text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-primary uppercase block">
-          Extraordinary
+          Premium Mobility
         </span>
       </div>
 
@@ -49,8 +49,7 @@ export function HeroContent() {
         style={{ transitionDelay: "0.4s" }}
       >
         <p className="font-inter text-lg md:text-xl text-white/80 max-w-2xl mb-10 mt-6">
-          Premium chauffeur and self-drive luxury vehicles for those who demand the
-          absolute best in comfort and style.
+          From executive sedans to luxury SUVs, we provide refined travel experiences with comfort, reliability, and professionalism.
         </p>
       </div>
 

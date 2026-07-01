@@ -79,8 +79,8 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
             </div>
             <div className="w-full md:w-1/2 pr-0 md:pr-4">
               <img 
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1000&q=80" 
-                alt="Corporate Meeting" 
+                src="/22.jpeg" 
+                alt="About Doora Mobility" 
                 className="w-full h-auto rounded-3xl shadow-xl object-cover aspect-[4/3] md:aspect-[3/2]"
               />
             </div>

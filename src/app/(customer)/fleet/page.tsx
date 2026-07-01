@@ -29,7 +29,7 @@ export default async function FleetPage({ searchParams }: { searchParams: Promis
             Our <span className="text-primary">Fleet</span>
           </h1>
           <p className="font-inter text-background/80 max-w-2xl mx-auto">
-            Choose from our meticulously maintained selection of the world's most prestigious automotive brands.
+            Choose from our extensive fleet of clean, well-maintained, and reliable vehicles, thoughtfully selected to meet every travel requirement.
           </p>
         </div>
       </section>
@@ -109,7 +109,6 @@ export default async function FleetPage({ searchParams }: { searchParams: Promis
       <section className="py-20 bg-secondary/20 border-t border-border/50">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold tracking-wider uppercase text-sm">Elite Standards</span>
             <h2 className="font-space-grotesk text-3xl md:text-4xl font-bold mt-2 mb-6">The DOORA Advantage</h2>
           </div>
           

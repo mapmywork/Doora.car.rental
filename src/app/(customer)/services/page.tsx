@@ -121,12 +121,11 @@ export default function ServicesPage() {
            <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent"></div>
         </div>
         <div className="container relative z-10 mx-auto px-4 text-center">
-          <span className="text-red-500 font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Elevate Your Journey</span>
           <h1 className="font-space-grotesk text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-tighter mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">Services</span>
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">Mobility Solutions</span>
           </h1>
           <p className="font-inter text-white/80 max-w-2xl mx-auto text-lg md:text-xl">
-            From seamless airport transfers to bespoke VIP mobility, we offer a comprehensive suite of premium transportation solutions.
+            DOORA offers comprehensive mobility solutions designed for individuals, businesses, and corporate clients. From daily commutes to premium travel experiences, we deliver safe, reliable, and technology-enabled transportation services tailored to every journey.
           </p>
         </div>
       </section>

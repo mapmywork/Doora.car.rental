@@ -27,9 +27,9 @@ export function Footer() {
         <div>
           <h4 className="font-space-grotesk font-semibold text-lg mb-4">Contact</h4>
           <ul className="space-y-2 font-inter text-sm text-background/70">
-            <li>Email: contact@dooramobility.com</li>
-            <li>Phone: +1 234 567 8900</li>
-            <li>Address: 123 Premium Way, Luxury City</li>
+            <li>Email: sales@dooramobility.com</li>
+            <li>Phone: +91 97634-97635</li>
+            <li>Address: Arjun Building,1st Floor,Naylor Road,Near Atur Park Gate No 5, Koregaon Park Pune 411001</li>
           </ul>
         </div>
 

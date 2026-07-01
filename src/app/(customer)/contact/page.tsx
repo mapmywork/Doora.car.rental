@@ -9,7 +9,7 @@ export const metadata = {
 
 export default async function ContactPage() {
   const settings = await db.businessSettings.findFirst();
-  const whatsappNumber = settings?.whatsappNumber || "1234567890";
+  const whatsappNumber = settings?.whatsappNumber || "919763497635";
 
   return (
     <div className="flex flex-col w-full min-h-screen">
@@ -19,7 +19,7 @@ export default async function ContactPage() {
             Contact <span className="text-primary">Us</span>
           </h1>
           <p className="font-inter text-background/80 max-w-2xl mx-auto">
-            Our concierge team is available 24/7 to assist with your luxury vehicle requirements.
+            Our dedicated team is available 24/7 to assist with your transportation needs, ensuring a smooth, safe, and comfortable travel experience.
           </p>
         </div>
       </section>
@@ -43,7 +43,7 @@ export default async function ContactPage() {
               </div>
               <div>
                 <h3 className="font-space-grotesk font-bold text-xl mb-2">Office Location</h3>
-                <p className="font-inter text-foreground/80">123 Premium Way<br/>Luxury City, LX 90210</p>
+                <p className="font-inter text-foreground/80">Arjun Building, 1st Floor<br/>Naylor Road, Near Atur Park Gate No 5<br/>Koregaon Park Pune 411001</p>
               </div>
             </div>
 
@@ -53,7 +53,7 @@ export default async function ContactPage() {
               </div>
               <div>
                 <h3 className="font-space-grotesk font-bold text-xl mb-2">Phone / WhatsApp</h3>
-                <p className="font-inter text-foreground/80">+1 234 567 8900</p>
+                <p className="font-inter text-foreground/80">+91 97634-97635</p>
               </div>
             </div>
 
@@ -63,7 +63,7 @@ export default async function ContactPage() {
               </div>
               <div>
                 <h3 className="font-space-grotesk font-bold text-xl mb-2">Email Address</h3>
-                <p className="font-inter text-foreground/80">contact@dooramobility.com</p>
+                <p className="font-inter text-foreground/80">sales@dooramobility.com</p>
               </div>
             </div>
           </div>
