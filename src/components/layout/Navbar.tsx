@@ -34,7 +34,7 @@ export function Navbar() {
         <nav className="hidden md:flex gap-8 font-inter text-sm font-medium">
           <Link href="/" className="hover:text-primary transition-colors">Home</Link>
           <Link href="/fleet" className="hover:text-primary transition-colors">Our Fleet</Link>
-          <Link href="/#services" className="hover:text-primary transition-colors">Services</Link>
+          <Link href="/services" className="hover:text-primary transition-colors">Services</Link>
           <Link href="/about" className="hover:text-primary transition-colors">About Us</Link>
           <Link href="/contact" className="hover:text-primary transition-colors">Contact</Link>
         </nav>

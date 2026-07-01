@@ -60,14 +60,17 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
               <h2 className="font-space-grotesk text-3xl md:text-4xl lg:text-[40px] font-bold text-[#111111] leading-tight">
                 About <span className="text-[#ef4444]">DOORA Mobility</span>
               </h2>
-              <p className="font-inter text-[#4a4a4a] leading-relaxed text-sm md:text-base">
-                Founded with the goal of revolutionizing executive car rental services in India, DOORA brings
-                together technology, luxury, and professionalism to create a smarter way to travel. For over a
-                decade, we have served India's top corporate houses, government institutions, and global
-                enterprises with an unwavering focus on quality, punctuality, and safety. Every booking with DOORA
-                is backed by real-time tracking, transparent pricing, and a dedicated support team. Want to learn
-                more about our story, leadership, and corporate values?
-              </p>
+              <div className="space-y-4 font-inter text-[#4a4a4a] leading-relaxed text-sm md:text-base">
+                <p>
+                  DOORA was established with a vision to redefine corporate and premium mobility by combining dependable service, modern technology, and customer-first experiences. We provide professional transportation solutions for businesses, travellers, and individuals, offering services ranging from airport transfers and corporate travel to outstation journeys and event transportation.
+                </p>
+                <p>
+                  Our focus is on delivering safe, punctual, and comfortable travel through a network of verified drivers, well-maintained vehicles, and transparent pricing. Every trip is supported by responsive customer service and technology-driven booking and trip management to ensure a seamless experience from reservation to destination.
+                </p>
+                <p>
+                  As a growing mobility brand, DOORA is committed to building long-term relationships based on trust, reliability, and service excellence. Our mission is to become the preferred transportation partner for corporate clients and individual travellers by consistently delivering quality, professionalism, and value.
+                </p>
+              </div>
               <div className="pt-2">
                 <Link href="/about" className="inline-block bg-[#ef4444] text-white font-inter font-semibold px-8 py-3 rounded-full hover:bg-red-600 transition-colors shadow-md">
                   Read More
@@ -87,96 +90,7 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
 
 
 
-      {/* Premium Services Section */}
-      <section id="services" className="py-24 bg-[#111111]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-space-grotesk text-4xl md:text-5xl font-bold text-white mb-4">
-              Premium Services
-            </h2>
-            <p className="font-inter text-white/70 max-w-2xl mx-auto">
-              Tailored travel solutions designed to elevate your journey.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Card 1 */}
-            <div className="group relative h-[300px] rounded-2xl overflow-hidden cursor-pointer">
-              <img 
-                src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80" 
-                alt="Airport Transportation Services" 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <h3 className="font-space-grotesk text-xl md:text-2xl font-bold text-white mb-2">Airport Transportation Services</h3>
-                <p className="text-white/80 text-sm font-inter mb-3 line-clamp-2">Premium airport transfers with dedicated meet & greet services</p>
-                <span className="text-red-500 font-bold text-sm uppercase tracking-wider group-hover:text-red-400 transition-colors">Learn More &rarr;</span>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="group relative h-[300px] rounded-2xl overflow-hidden cursor-pointer">
-              <img 
-                src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80" 
-                alt="Employee Transportation" 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <h3 className="font-space-grotesk text-xl md:text-2xl font-bold text-white mb-2">Employee Transportation</h3>
-                <p className="text-white/80 text-sm font-inter mb-3 line-clamp-2">Delivering seamless home-to-office and office-to-home commute solutions</p>
-                <span className="text-red-500 font-bold text-sm uppercase tracking-wider group-hover:text-red-400 transition-colors">Learn More &rarr;</span>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group relative h-[300px] rounded-2xl overflow-hidden cursor-pointer">
-              <img 
-                src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=800&q=80" 
-                alt="Event Transportation Services" 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <h3 className="font-space-grotesk text-xl md:text-2xl font-bold text-white mb-2">Event Transportation Services</h3>
-                <p className="text-white/80 text-sm font-inter mb-3 line-clamp-2">Comprehensive workforce mobility solutions for enterprises</p>
-                <span className="text-red-500 font-bold text-sm uppercase tracking-wider group-hover:text-red-400 transition-colors">Learn More &rarr;</span>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="group relative h-[300px] rounded-2xl overflow-hidden cursor-pointer">
-              <img 
-                src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80" 
-                alt="Outstation Visit" 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <h3 className="font-space-grotesk text-xl md:text-2xl font-bold text-white mb-2">Outstation Visit</h3>
-                <p className="text-white/80 text-sm font-inter mb-3 line-clamp-2">Professional chauffeur-driven services for business excellence</p>
-                <span className="text-red-500 font-bold text-sm uppercase tracking-wider group-hover:text-red-400 transition-colors">Learn More &rarr;</span>
-              </div>
-            </div>
-
-            {/* Card 5 */}
-            <div className="group relative h-[300px] rounded-2xl overflow-hidden cursor-pointer">
-              <img 
-                src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80" 
-                alt="Spot Rental" 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <h3 className="font-space-grotesk text-xl md:text-2xl font-bold text-white mb-2">Spot Rental</h3>
-                <p className="text-white/80 text-sm font-inter mb-3 line-clamp-2">Extensive pan-India coverage across 180+ major cities</p>
-                <span className="text-red-500 font-bold text-sm uppercase tracking-wider group-hover:text-red-400 transition-colors">Learn More &rarr;</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Featured Fleet Section */}
       <section className="py-24 bg-background">
@@ -273,86 +187,75 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
               <div className="text-red-500 mb-4">
                 <MapPin size={36} strokeWidth={1.5} />
               </div>
-              <h3 className="font-bold text-[#111111] mb-3 text-lg">Pan-India Presence</h3>
+              <h3 className="font-bold text-[#111111] mb-3 text-lg">Multi-City Operations</h3>
               <p className="text-[#111111]/60 text-sm leading-relaxed max-w-[260px] mx-auto">
-                Operations in 180+ cities, ensuring seamless service across the country.
+                Reliable transportation services across multiple cities through our growing network of trusted fleet partners, ensuring consistent, safe, and seamless travel experiences.
               </p>
             </div>
             
             {/* 2 */}
             <div className="flex flex-col items-center text-center">
               <div className="text-red-500 mb-4">
-                <Clock size={36} strokeWidth={1.5} />
+                <Car size={36} strokeWidth={1.5} />
               </div>
-              <h3 className="font-bold text-[#111111] mb-3 text-lg">Experience & Expertise</h3>
+              <h3 className="font-bold text-[#111111] mb-3 text-lg">Reliable Mobility Network & Infrastructure</h3>
               <p className="text-[#111111]/60 text-sm leading-relaxed max-w-[260px] mx-auto">
-                Over 13 years in the travel industry, specializing in corporate transport solutions.
+                A well-managed fleet network backed by efficient infrastructure and dedicated support
               </p>
             </div>
 
             {/* 3 */}
             <div className="flex flex-col items-center text-center">
               <div className="text-red-500 mb-4">
-                <Car size={36} strokeWidth={1.5} />
+                <Cpu size={36} strokeWidth={1.5} />
               </div>
-              <h3 className="font-bold text-[#111111] mb-3 text-lg">Own Fleet & Infrastructure</h3>
+              <h3 className="font-bold text-[#111111] mb-3 text-lg">Smart Technology</h3>
               <p className="text-[#111111]/60 text-sm leading-relaxed max-w-[260px] mx-auto">
-                In-house fleet, 40,000 sq. ft. parking per branch, dedicated service and fuel stations for uninterrupted service.
+                Smart booking platform with real-time GPS tracking, trip monitoring, and client dashboards for a seamless, secure, and transparent travel experience.
               </p>
             </div>
 
             {/* 4 */}
             <div className="flex flex-col items-center text-center">
               <div className="text-red-500 mb-4">
-                <Cpu size={36} strokeWidth={1.5} />
+                <Headset size={36} strokeWidth={1.5} />
               </div>
-              <h3 className="font-bold text-[#111111] mb-3 text-lg">Advanced Technology</h3>
+              <h3 className="font-bold text-[#111111] mb-3 text-lg">Round-the-Clock Support</h3>
               <p className="text-[#111111]/60 text-sm leading-relaxed max-w-[260px] mx-auto">
-                Booking Application, Real-time GPS tracking, client dashboards, and trip monitoring for safety and transparency.
+                Our dedicated support team is available day and night to assist with bookings, trip updates, and travel assistance whenever you need us.
               </p>
             </div>
 
             {/* 5 */}
             <div className="flex flex-col items-center text-center">
               <div className="text-red-500 mb-4">
-                <Headset size={36} strokeWidth={1.5} />
+                <Users size={36} strokeWidth={1.5} />
               </div>
-              <h3 className="font-bold text-[#111111] mb-3 text-lg">24/7 Operations Support</h3>
+              <h3 className="font-bold text-[#111111] mb-3 text-lg">Professional Driving Team</h3>
               <p className="text-[#111111]/60 text-sm leading-relaxed max-w-[260px] mx-auto">
-                Round-the-clock assistance with a dedicated Key Account Manager and emergency response readiness.
+                Trusted and professional drivers dedicated to providing safe, punctual, and customer-focused transportation services.
               </p>
             </div>
 
             {/* 6 */}
             <div className="flex flex-col items-center text-center">
               <div className="text-red-500 mb-4">
-                <Users size={36} strokeWidth={1.5} />
+                <ShieldCheck size={36} strokeWidth={1.5} />
               </div>
-              <h3 className="font-bold text-[#111111] mb-3 text-lg">Driver Excellence</h3>
+              <h3 className="font-bold text-[#111111] mb-3 text-lg">Committed to Quality Standards</h3>
               <p className="text-[#111111]/60 text-sm leading-relaxed max-w-[260px] mx-auto">
-                Well-trained chauffeurs with regular briefings, background checks, and on-site accommodations.
+                ISO 27001 certified with full fleet and documentation compliance for peace of mind.
               </p>
             </div>
 
             {/* 7 */}
             <div className="flex flex-col items-center text-center">
               <div className="text-red-500 mb-4">
-                <ShieldCheck size={36} strokeWidth={1.5} />
-              </div>
-              <h3 className="font-bold text-[#111111] mb-3 text-lg">Compliance & Security</h3>
-              <p className="text-[#111111]/60 text-sm leading-relaxed max-w-[260px] mx-auto">
-                ISO 27001 certified with full fleet and documentation compliance for peace of mind.
-              </p>
-            </div>
-
-            {/* 8 */}
-            <div className="flex flex-col items-center text-center">
-              <div className="text-red-500 mb-4">
                 <PieChart size={36} strokeWidth={1.5} />
               </div>
-              <h3 className="font-bold text-[#111111] mb-3 text-lg">Flexible Services</h3>
+              <h3 className="font-bold text-[#111111] mb-3 text-lg">Flexible Mobility Solutions</h3>
               <p className="text-[#111111]/60 text-sm leading-relaxed max-w-[260px] mx-auto">
-                ETS, spot rentals, monthly, short-term, and long-term plans, customized & tailored to corporate needs.
+                Tailored corporate mobility solutions including Employee Transportation Services (ETS), spot rentals, and flexible short-term, monthly, and long-term plans.
               </p>
             </div>
           </div>
@@ -378,16 +281,13 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
                   Attach your vehicle with DOORA and start earning with every ride
                 </p>
                 <h2 className="font-space-grotesk text-4xl md:text-5xl font-bold text-[#111111] mb-6">
-                  Supplier Benefits
+                  Grow Together with DOORA
                 </h2>
                 <div className="inline-block bg-red-50 text-red-500 font-bold text-sm tracking-wider uppercase px-6 py-2 rounded-full mb-6 shadow-sm">
-                  YOUR FLEET - OUR PLATFORM - UNLIMITED POSSIBILITIES..!
+                  Partner with DOORA and Grow Your Business
                 </div>
                 <p className="font-inter text-gray-600 leading-relaxed text-sm md:text-base">
-                  By partnering with DOORA, unlock sustainable growth, steady business opportunities, and 
-                  long-term success. As a trusted leader in car rental industry, DOORA values strong 
-                  relationships with reliable suppliers, offering a platform where your fleet and services truly 
-                  flourish.
+                  Join DOORA's trusted partner network and unlock new business opportunities with a steady flow of ride requests. We are committed to building long-term relationships with professional fleet owners and travel partners through transparency, reliability, and mutual growth.
                 </p>
               </div>
 
@@ -397,9 +297,9 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
                     <Check strokeWidth={3} className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#111111] mb-1">Consistent Bookings</h4>
+                    <h4 className="font-bold text-[#111111] mb-1">Regular Business Opportunities</h4>
                     <p className="text-sm text-gray-500 font-inter leading-relaxed">
-                      Gain access to large and growing customer base that ensures regular demand for your fleets.
+                      Receive consistent trip requests from corporate, airport, local, and outstation travel requirements.
                     </p>
                   </div>
                 </div>
@@ -409,9 +309,9 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
                     <Check strokeWidth={3} className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#111111] mb-1">Timely Payments & Transparent Terms</h4>
+                    <h4 className="font-bold text-[#111111] mb-1">Transparent Payments</h4>
                     <p className="text-sm text-gray-500 font-inter leading-relaxed">
-                      Transparent billing and prompt payments help maintain healthy cash flow for your operations.
+                      Benefit from clear pricing, timely settlements, and a simple payment process that supports your business.
                     </p>
                   </div>
                 </div>
@@ -421,9 +321,9 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
                     <Check strokeWidth={3} className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#111111] mb-1">Brand Association</h4>
+                    <h4 className="font-bold text-[#111111] mb-1">Business Growth</h4>
                     <p className="text-sm text-gray-500 font-inter leading-relaxed">
-                      Work with a reputed brand and gain credibility and trust in the industry.
+                      Expand your reach by serving a wider customer base while strengthening your brand through a trusted mobility platform.
                     </p>
                   </div>
                 </div>
@@ -433,9 +333,33 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
                     <Check strokeWidth={3} className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#111111] mb-1">24/7 Assistance</h4>
+                    <h4 className="font-bold text-[#111111] mb-1">Dedicated Partner Support</h4>
                     <p className="text-sm text-gray-500 font-inter leading-relaxed">
-                      Dedicated supplier support to address queries efficiently and maintain hassle-free coordination
+                      Our partner support team is available to assist with trip coordination, operational queries, and ongoing business needs.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 items-start">
+                  <div className="mt-1 flex-shrink-0 text-red-500">
+                    <Check strokeWidth={3} className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#111111] mb-1">Easy Onboarding</h4>
+                    <p className="text-sm text-gray-500 font-inter leading-relaxed">
+                      Join our growing network with a straightforward registration process and start accepting trips quickly.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 items-start">
+                  <div className="mt-1 flex-shrink-0 text-red-500">
+                    <Check strokeWidth={3} className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#111111] mb-1">Long-Term Partnership</h4>
+                    <p className="text-sm text-gray-500 font-inter leading-relaxed">
+                      We believe in building lasting relationships that create value for both our partners and customers.
                     </p>
                   </div>
                 </div>
