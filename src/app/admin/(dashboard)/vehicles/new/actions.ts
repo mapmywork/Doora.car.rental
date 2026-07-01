@@ -22,6 +22,8 @@ export async function createVehicle(formData: FormData) {
   const luggage = parseInt(formData.get("luggage") as string, 10) || 2;
   const transmission = formData.get("transmission") as string;
   const fuel = formData.get("fuel") as string;
+  const body = formData.get("body") as string;
+  const engine = formData.get("engine") as string;
   const featuresStr = formData.get("features") as string;
   const features = featuresStr ? featuresStr.split(",").map(f => f.trim()) : [];
   
@@ -46,6 +48,8 @@ export async function createVehicle(formData: FormData) {
       luggage,
       transmission,
       fuel,
+      body,
+      engine,
       features,
       isAvailable,
       featured,

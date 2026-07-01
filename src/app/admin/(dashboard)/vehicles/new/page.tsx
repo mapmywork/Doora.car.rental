@@ -45,7 +45,11 @@ export default function NewVehiclePage() {
           <div className="bg-background rounded-xl border border-border p-6 shadow-sm space-y-6">
             <h2 className="font-space-grotesk text-xl font-bold border-b border-border/50 pb-2">Specifications</h2>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="space-y-2">
+                <label className="text-sm font-inter text-foreground/80">Body Type</label>
+                <input name="body" type="text" className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-2 font-inter" defaultValue="Sedan" />
+              </div>
               <div className="space-y-2">
                 <label className="text-sm font-inter text-foreground/80">Seats</label>
                 <input name="seats" type="number" className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-2 font-inter" defaultValue={4} />
@@ -53,6 +57,10 @@ export default function NewVehiclePage() {
               <div className="space-y-2">
                 <label className="text-sm font-inter text-foreground/80">Luggage</label>
                 <input name="luggage" type="number" className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-2 font-inter" defaultValue={2} />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-inter text-foreground/80">Engine</label>
+                <input name="engine" type="text" className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-2 font-inter" defaultValue="1248 cc" />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-inter text-foreground/80">Transmission</label>

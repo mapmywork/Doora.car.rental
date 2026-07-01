@@ -63,7 +63,7 @@ export default async function FleetPage({ searchParams }: { searchParams: Promis
                       <div className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-lg text-sm text-[#111111]">
                         <Car className="w-4 h-4 text-red-500 flex-shrink-0" />
                         <span className="text-gray-500">Body:</span>
-                        <span className="font-semibold truncate">Sedan</span>
+                        <span className="font-semibold truncate">{vehicle.body}</span>
                       </div>
                       <div className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-lg text-sm text-[#111111]">
                         <Users className="w-4 h-4 text-red-500 flex-shrink-0" />
@@ -73,7 +73,7 @@ export default async function FleetPage({ searchParams }: { searchParams: Promis
                       <div className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-lg text-sm text-[#111111]">
                         <Zap className="w-4 h-4 text-red-500 flex-shrink-0" />
                         <span className="text-gray-500">Engine:</span>
-                        <span className="font-semibold truncate">1248 cc</span>
+                        <span className="font-semibold truncate">{vehicle.engine}</span>
                       </div>
                       <div className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-lg text-sm text-[#111111]">
                         <Fuel className="w-4 h-4 text-red-500 flex-shrink-0" />

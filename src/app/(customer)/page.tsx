@@ -88,7 +88,7 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
 
 
       {/* Premium Services Section */}
-      <section className="py-24 bg-[#111111]">
+      <section id="services" className="py-24 bg-[#111111]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-space-grotesk text-4xl md:text-5xl font-bold text-white mb-4">
@@ -219,7 +219,7 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
                       <div className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-lg text-sm text-[#111111]">
                         <Car className="w-4 h-4 text-red-500 flex-shrink-0" />
                         <span className="text-gray-500">Body:</span>
-                        <span className="font-semibold truncate">Sedan</span>
+                        <span className="font-semibold truncate">{vehicle.body}</span>
                       </div>
                       <div className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-lg text-sm text-[#111111]">
                         <Users className="w-4 h-4 text-red-500 flex-shrink-0" />
@@ -229,7 +229,7 @@ export default async function HomePage({ searchParams }: { searchParams: Promise
                       <div className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-lg text-sm text-[#111111]">
                         <Zap className="w-4 h-4 text-red-500 flex-shrink-0" />
                         <span className="text-gray-500">Engine:</span>
-                        <span className="font-semibold truncate">1248 cc</span>
+                        <span className="font-semibold truncate">{vehicle.engine}</span>
                       </div>
                       <div className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-lg text-sm text-[#111111]">
                         <Fuel className="w-4 h-4 text-red-500 flex-shrink-0" />

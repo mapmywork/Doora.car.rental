@@ -53,6 +53,8 @@ model Vehicle {
   seats        Int
   transmission String // "Automatic" or "Manual"
   fuel         String // "Petrol", "Diesel", "Electric", "Hybrid"
+  body         String @default("Sedan")
+  engine       String @default("1248 cc")
   luggage      Int
   featured     Boolean  @default(false)
   isAvailable  Boolean  @default(true)
