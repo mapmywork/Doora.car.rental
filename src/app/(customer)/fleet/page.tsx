@@ -44,7 +44,7 @@ export default async function FleetPage({ searchParams }: { searchParams: Promis
                   <img 
                     src={vehicle.images.find((img: any) => img.isPrimary)?.url || vehicle.images[0]?.url || "https://placehold.co/800x600/111111/FFFFFF?text=DOORA+MOBILITY"} 
                     alt={vehicle.name} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
                 <div className="p-6">

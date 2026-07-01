@@ -21,7 +21,7 @@ export function generateWhatsAppConfirmationLink(order: WhatsAppOrderDetails): s
   });
 
   // Construct message
-  const message = `Hello ${order.customerName},\n\nYour booking with Way2Car is confirmed! 🎉\n\n*Booking ID:* ${order.id.slice(0, 8).toUpperCase()}\n*Vehicle:* ${order.vehicle}\n*Pickup:* ${pickup}\n*Dropoff:* ${drop}${order.pickupLocation ? `\n*Location:* ${order.pickupLocation}` : ''}\n\nThank you for choosing Way2Car! Drive safe.`;
+  const message = `Hello ${order.customerName},\n\nYour booking with DOORA MOBILITY is confirmed! 🎉\n\n*Booking ID:* ${order.id.slice(0, 8).toUpperCase()}\n*Vehicle:* ${order.vehicle}\n*Pickup:* ${pickup}\n*Dropoff:* ${drop}${order.pickupLocation ? `\n*Location:* ${order.pickupLocation}` : ''}\n\nThank you for choosing DOORA MOBILITY! Drive safe.`;
 
   // Format phone number: remove non-digits
   let formattedPhone = order.phone.replace(/\D/g, "");
