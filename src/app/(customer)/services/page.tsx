@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import { 
   Plane, 
   Briefcase, 
@@ -12,7 +12,6 @@ import {
   Crown, 
   Calendar, 
   Hotel,
-  ChevronRight,
   ArrowRight
 } from "lucide-react";
 
@@ -165,34 +164,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-[#111111] relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-red-600/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-red-600/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4"></div>
-        
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h2 className="font-space-grotesk text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to experience the difference?
-          </h2>
-          <p className="font-inter text-white/70 max-w-2xl mx-auto mb-10 text-lg">
-            Whether it's a corporate event, an airport transfer, or a special occasion, DOORA Mobility is here to provide an unforgettable travel experience.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link 
-              href="/contact" 
-              className="bg-red-500 text-white font-bold font-inter px-8 py-4 rounded-full hover:bg-red-600 transition-colors shadow-lg hover:shadow-red-500/25 flex items-center gap-2"
-            >
-              Contact Us Today <ChevronRight size={20} />
-            </Link>
-            <Link 
-              href="/fleet" 
-              className="bg-transparent border border-white/20 text-white font-bold font-inter px-8 py-4 rounded-full hover:bg-white/10 transition-colors flex items-center gap-2"
-            >
-              Browse Our Fleet
-            </Link>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 }
